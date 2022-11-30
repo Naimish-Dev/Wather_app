@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerlink}}
+</head>
+
+    {{>header}}
+    
+    <div class="constainer-fluid">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_contant">
+                    <div class="temp_form">
+                        <input type="text" id="cityname" placeholder="Entre city name" autocomplete="off">
+                        <input type="submit" id="submitbtn" value="search" </div>
+                    </div>
+                </div>
+                <div class="tempinfomation">
+                    <div class="top_layer">
+                        <p id="day">Tuesdat</p>
+                        <p id="today_date">13 oct</p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">City name</p>
+                        <div class="middle_layer" id="middle_layer">
+                            <p id="temp"><span>00.00</span><sup>o</sup> C</p>
+                            <p id="temp_status"><i class="fas fa-cloud"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Footer cod  -->
+        {{>footer}}
+      <!-- JavaScript Bundle with Popper -->
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+
+    const Day = document.getElementById("day")
+    const date = document.getElementById("today_date")
+
+    const setday =()=>{
+
+    const WeekDay= new Array(7);
+    WeekDay[0]="Sunday"
+    WeekDay[1]="Monday"
+    WeekDay[2]="Tuesday"
+    WeekDay[3]="Wednesday"
+    WeekDay[4]="Thursday"
+    WeekDay[5]="Friday"
+    WeekDay[6]="Saturday"
+
+const dayindex = new Date().getDay();
+
+const currentDay= WeekDay[dayindex]
+Day.innerText=currentDay;
+    };
+
+setday();
+
+const setdate=()=>{
+
+const month=new Array(11)
+
+month[0]="Jan"
+month[1]="Feb"
+month[2]="Mar"
+month[3]="Apr"
+month[4]="May"
+month[5]="Jub"
+month[6]="Jul"
+month[7]="Aug"
+month[8]="Sep"
+month[9]="Oct"
+month[10]="Nov"
+month[11]="Dec"
+
+
+const monthindex= new Date().getMonth();
+const year= new Date().getFullYear();
+const newdate= new Date().getDate();
+const newmonth=month[monthindex]
+
+date.innerText=`${newdate}/${newmonth}/${year}`
+
+
+}
+
+setdate();
+
+
+
+</script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

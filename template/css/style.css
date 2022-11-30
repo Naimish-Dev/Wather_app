@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,500;8..30,600;8..30,700&display=swap');
+:root{
+    --bg:#D4E9FA;
+    --color:#FFA513;
+}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Piazzolla', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+   margin: 0;
+}
+
+.header, .navbar{
+    background-color: var(--bg);
+}
+
+
+.header .navbar-brand{
+    font-size: 2.5rem;
+}
+
+.header .fa-snowflake{
+    transition: all 1s;
+animation: snows 2s linear infinite ;
+margin: 1rem;
+color: rgb(255, 255, 255);
+}
+
+@keyframes snows{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.header ul li a{
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0 0 0 1rem ;
+    display: inline-block;
+}
+
+.header ul li a::before{
+content: "";
+width: 0%;
+position: absolute;
+bottom: 0px;
+border-bottom:3px solid #FFA513;
+transition: all 1s;
+}
+
+.header ul li a:hover{
+color: black;
+
+}
+
+.header ul li a:hover::before{
+width: 100%;
+
+}
+.leftside, .rightside{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.leftside p{
+    font-size: 1.6rem;
+    
+}
+.leftside h1{
+font-size: 3.2rem;
+margin:  0 0 2rem 0;
+}
+.leftside h1 span{
+color: var(--color);}
+
+.leftside .btn{
+    border-radius: 10rem;
+    padding: 2px 10px;
+    font-size: 1.8rem;
+    width: 10rem;
+    font-weight: 700;
+}
+footer{
+    background-color: var(--bg);
+    height: 5rem;
+    margin-top: auto;
+}
+footer p{
+    text-align: center;
+    font-size: 1.5rem;
+padding-top: 1.5rem;
+
+}
+footer span{
+   color: #FFA513;
+   font-weight: 600;
+   font-style:italic;
+}
+
+@media (max-width:768px) {
+    .leftside, .rightside{
+        height: auto;
+        margin: 5rem 0;
+    }
+}
+
+

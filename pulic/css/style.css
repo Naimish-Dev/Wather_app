@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,500;8..30,600;8..30,700&display=swap');
+:root{
+    --bg:#D4E9FA;
+    --color:#FFA513;
+}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Piazzolla', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+   margin: 0;
+}
+
+.header, .navbar{
+    background-color: var(--bg);
+}
+
+
+.header .navbar-brand{
+    font-size: 2.5rem;
+}
+
+.header .fa-snowflake{
+    transition: all 1s;
+animation: snows 2s linear infinite ;
+margin: 1rem;
+color: rgb(255, 255, 255);
+}
+
+@keyframes snows{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.header ul li a{
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0 0 0 1rem ;
+    display: inline-block;
+}
+
+.header ul li a::before{
+content: "";
+width: 0%;
+position: absolute;
+bottom: 0px;
+border-bottom:3px solid #FFA513;
+transition: all 1s;
+}
+
+.header ul li a:hover{
+color: black;
+
+}
+
+.header ul li a:hover::before{
+width: 100%;
+
+}
+.leftside, .rightside{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.leftside p{
+    font-size: 1.6rem;
+    
+}
+.leftside h1{
+font-size: 3.2rem;
+margin:  0 0 2rem 0;
+}
+.leftside h1 span{
+color: var(--color);}
+
+.leftside .btn{
+    border-radius: 10rem;
+    padding: 2px 10px;
+    font-size: 1.8rem;
+    width: 10rem;
+    font-weight: 700;
+}
+
+footer{
+    background-color: var(--bg);
+    height: 5rem;
+    margin-top: auto;
+}
+
+footer p{
+    text-align: center;
+    font-size: 1.5rem;
+padding-top: 1.5rem;
+
+}
+footer span{
+   color: #FFA513;
+   font-weight: 600;
+   font-style:italic;
+}
+
+
+
+
+.tempinfomation{
+    width: 30rem;
+    height: 20rem;
+    background-color: var(--bg);
+    color: black;
+    font-weight: 500;
+    border-radius: 1rem;
+    border:2px solid rgb(0, 200, 255);
+    margin:3rem auto;
+}
+
+.tempinfomation p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.top_layer{
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgb(0, 200, 255);
+    padding: 0 1rem;
+}
+
+.top_layer p{
+    padding: 3px 0;
+}
+
+.main_layer{
+    padding: 1rem;
+}
+
+.main_layer p{
+font-size: 2rem;
+
+}
+.middle_layer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.middle_layer p{
+    font-size: 4rem;
+}
+#temp_status{
+color: white;
+}
+
+.main_contant{
+    width: auto;
+    margin: 3rem 0;
+}
+
+.temp_form{
+    border-radius: 5rem;
+    width: 50rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.temp_form input{
+    background-color: transparent;
+    border: none;
+    border-radius: 5rem;
+font-size: 1.5rem;
+padding:0.3rem 0.5rem;
+}
+
+
+.temp_form #cityname {
+    border: none;
+    outline: 2px solid var(--color);    
+    width: 77%;
+}
+
+.temp_form #submitbtn {
+    border:2px solid  #FFA513;
+    text-align: center;
+    font-weight: 700;
+    transition: all 1s;
+
+}
+
+.temp_form #submitbtn:hover{
+    background-color: #D4E9FA;
+    border: 2px solid skyblue;
+}
+
+@media (max-width:768px) {
+    .leftside, .rightside{
+        height: auto;
+        margin: 5rem 0;
+    }
+
+  
+}
+@media (max-width:512px) {
+   
+
+    .tempinfomation{
+        width: 20rem;     
+        
+    }
+
+    .temp_form{
+            width: 20rem;
+    }
+    .middle_layer p{
+        font-size: 3rem;
+        margin: 3rem auto;
+    }
+}
+
+.data_hide{
+    display: none;
+}
